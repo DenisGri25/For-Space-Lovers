@@ -1,0 +1,11 @@
+﻿@model SpaceVievModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2> Astronomy Picture of the Day </h2>
+<div>@Html.DisplayFor(model => model.Title) </div>
+<div style="padding-bottom: 10px">@Html.DisplayFor(model => model.Explanation) </div>
+<img src="@Html.DisplayFor(model => model.Url)" alt="APOD" />
