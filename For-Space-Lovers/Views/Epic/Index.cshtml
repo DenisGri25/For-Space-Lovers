@@ -1,0 +1,39 @@
+﻿@model IEnumerable<For_Space_Lovers.Models.EpicViewModel>
+
+@{
+    ViewBag.Title = "EPIC";
+    Layout = "_Layout";
+}
+
+<h2>Earth Polychromatic Imaging Camera (EPIC)</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model!) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caption)
+            </td>
+            <td>
+                <img height="300px" width="300px" src="@Html.DisplayFor(modelItem => item.Image)"/>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
